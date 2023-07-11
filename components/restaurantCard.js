@@ -6,8 +6,22 @@ import { useNavigation } from "@react-navigation/native";
 const RestaurantCard = (props) => {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity className="bg-white mr-3 shadow"
-    onPress={()=>{navigation.navigate("Restaurant",{id:props.id,title:props.title})}}
+    <TouchableOpacity
+      className="bg-white mr-3 shadow"
+      onPress={() => {
+        navigation.navigate("Restaurant", {
+          id: props.id,
+          title: props.title,
+          imgUrl: props.imgUrl,
+          genre: props.genre,
+          rating: props.rating,
+          address: props.address,
+          short_description: props.short_description,
+          dishes: props.dishes,
+          long : props.long,
+            lat : props.lat,
+        });
+      }}
     >
       <Image
         source={{
