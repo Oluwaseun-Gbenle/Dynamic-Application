@@ -14,8 +14,8 @@ import {
   MagnifyingGlassIcon,
   UserIcon,
 } from "react-native-heroicons/outline";
-import Categories from "../components/categories";
-import { AllRestaurants, Discount, Featured, OfferNearYou } from "../components/featuredRow";
+import { AllRestaurants, Discount, Featured, OfferNearYou } from "../components/Home-components/featuredRow";
+import Categories from "../components/Home-components/categories";
 
 const Home = () => {
   const navigation = useNavigation();

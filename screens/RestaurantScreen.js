@@ -8,8 +8,8 @@ import {
   QuestionMarkCircleIcon,
   StarIcon,
 } from "react-native-heroicons/outline";
-import DishRow from "../components/DishRow";
-import BasketIcon from "../components/BasketIcon";
+import DishRow from "../components/Restaurant-components/DishRow";
+import BasketIcon from "../components/Restaurant-components/BasketIcon";
 import { useDispatch } from "react-redux";
 import { setRestaurant } from "../slices/restaurantSlice";
 import { useEffect } from "react";

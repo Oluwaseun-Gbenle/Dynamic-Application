@@ -2,7 +2,7 @@ import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./restaurantCard";
-import { discount, featured, offers, restaurants } from "../fetched-json-files/features";
+import { discount, featured, offers, restaurants } from "../../fetched-json-files/features";
 import RestaurantCard2 from "./restaurantCardTwo";
 
 export const OfferNearYou = ({ title, description, id }) => {

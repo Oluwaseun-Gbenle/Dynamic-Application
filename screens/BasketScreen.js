@@ -7,15 +7,15 @@ import { selectBasketItems } from '../slices/basketSlice';
 
 const BasketScreen = () => {
     const navigation = useNavigation();
-    const restaurant = useSelector(selectRestaurant);
-    const items = useSelector(selectBasketItems);
-    const dispatch = useDispatch();
-    const [groupItemsInBasket, setGroupItemsInBasket] = useState([]);
+    // const restaurant = useSelector(selectRestaurant);
+    // const items = useSelector(selectBasketItems);
+    // const dispatch = useDispatch();
+    // const [groupItemsInBasket, setGroupItemsInBasket] = useState([]);
 
-    useMemo(() => {
+    // useMemo(() => {
 
-    },
-    [items])
+    // },
+    // [items])
   return (
     <View>
       <Text>BasketScreen</Text>

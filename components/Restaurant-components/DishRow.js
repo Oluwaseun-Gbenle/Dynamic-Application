@@ -2,7 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import { MinusCircleIcon, PlusCircleIcon } from "react-native-heroicons/outline";
 import { useDispatch, useSelector } from "react-redux";
-import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWithId } from "../slices/basketSlice";
+import { addToBasket, removeFromBasket, selectBasketItems, selectBasketItemsWithId } from "../../slices/basketSlice";
 
 const DishRow = (props) => {
     const [isPressed, setIsPressed] = useState(false);
@@ -15,7 +15,7 @@ const DishRow = (props) => {
      // if(items.length < 0)return;
       dispatch(removeFromBasket(props.id))
     }
-    console.log("props",props.id,"items",items);
+    console.log("props",props,"items",items);
   return (
     <>
     <TouchableOpacity onPress={()=>setIsPressed(!isPressed)} className={`bg-white p-4 border border-gray-200 ${isPressed && "border-b-0"}`}>
