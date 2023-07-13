@@ -2,10 +2,9 @@ import { View, Text, SafeAreaView, TouchableOpacity, Image } from "react-native"
 import React from "react";
 import { selectRestaurant } from "../slices/restaurantSlice";
 import { useNavigation } from "@react-navigation/native";
-import MapView from "react-native-maps";
+import MapView,{ Marker } from "react-native-maps";
 import { XMarkIcon } from "react-native-heroicons/outline";
 import * as Progress from "react-native-progress";
-import { Marker } from "react-native-svg";
 import { useSelector } from "react-redux";
 
 const DeliveryScreen = () => {
@@ -45,8 +44,8 @@ const DeliveryScreen = () => {
       initialRegion={{
         latitude:restaurant.lat,
         longitude:restaurant.long,
-        latitudeDelta:0.015,
-        longitudeDelta:0.015,
+        latitudeDelta:0.010,
+        longitudeDelta:0.010,
       }}
       className="-mt-10 z-0 flex-1"
       mapType="mutedStandard"
@@ -59,7 +58,7 @@ const DeliveryScreen = () => {
           title={restaurant.title}
           description={restaurant.short_description}
           identifier='origin'
-            pinColor="00CCBB"
+            pinColor="#00CCBB"
         />
       </MapView>
       <SafeAreaView className="bg-white h-28 space-x-6 flex-row items-center">

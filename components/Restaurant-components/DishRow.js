@@ -14,7 +14,7 @@ const DishRow = (props) => {
     const removeItemFromBasket = () =>{
       dispatch(removeFromBasket({id: props.id}))
     }
-    
+
   return (
     <>
     <TouchableOpacity onPress={()=>setIsPressed(!isPressed)} className={`bg-white p-4 border border-gray-200 ${isPressed && "border-b-0"}`}>
@@ -24,7 +24,7 @@ const DishRow = (props) => {
             {props.name}
           </Text>
           <Text className="text-gray-400">{props.description}</Text>
-          <Text className="text-gray-400 mt-2">{props.price}</Text>
+          <Text className="text-gray-400 mt-2">&#x20A6;{props.price}</Text>
         </View>
         <View>
           <Image
