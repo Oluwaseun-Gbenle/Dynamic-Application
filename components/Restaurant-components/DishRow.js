@@ -12,10 +12,9 @@ const DishRow = (props) => {
       dispatch(addToBasket(props))
     }
     const removeItemFromBasket = () =>{
-     // if(items.length < 0)return;
-      dispatch(removeFromBasket(props.id))
+      dispatch(removeFromBasket({id: props.id}))
     }
-    console.log("props",props,"items",items);
+    
   return (
     <>
     <TouchableOpacity onPress={()=>setIsPressed(!isPressed)} className={`bg-white p-4 border border-gray-200 ${isPressed && "border-b-0"}`}>

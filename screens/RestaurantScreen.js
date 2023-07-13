@@ -1,5 +1,5 @@
 import { View, ScrollView, Image, Text, TouchableOpacity } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect,useEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import {
   ArrowLeftIcon,
@@ -12,16 +12,16 @@ import DishRow from "../components/Restaurant-components/DishRow";
 import BasketIcon from "../components/Restaurant-components/BasketIcon";
 import { useDispatch } from "react-redux";
 import { setRestaurant } from "../slices/restaurantSlice";
-import { useEffect } from "react";
+
 
 const RestaurantScreen = () => {
   const route = useRoute();
   const navigation = useNavigation();
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  // dispatch(setRestaurant[route.params])
-  // }, [])
+useEffect(() => {
+ dispatch(setRestaurant(route.params))
+   }, [])
   
   useLayoutEffect(() => {
     navigation.setOptions({

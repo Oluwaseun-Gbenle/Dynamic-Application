@@ -20,7 +20,7 @@ const BasketIcon = () => {
     View Basket
     </Text>
     <Text className="text-white font-extrabold text-lg">
-${basketTotal}
+    &#x20A6;{basketTotal}
     </Text>
   </TouchableOpacity>
     </View>
